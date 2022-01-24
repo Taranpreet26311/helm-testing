@@ -1,0 +1,6 @@
+
+
+release: latest
+image: taranpreet26311/argo-v2
+replicas: 2
+namespace: default

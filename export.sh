@@ -1,0 +1,2 @@
+export CURRENT_VERSION="$(grep  "\release: " helm-testing/charts-test/values.yaml | awk -F ": " '{print $2}')"
+export CHART_VERSION="$(grep  "\version: " helm-testing/charts-test/Chart.yaml | awk -F ": " '{print $2}')"

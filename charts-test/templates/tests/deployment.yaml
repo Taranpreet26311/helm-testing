@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: golang-app
-  namespace: { .Values.namespace }
+  namespace: {{ .Values.namespace }}
   labels:
     app: go
 spec:
-  replicas: { Values.replicas }
+  replicas: {{ Values.replicas }}
   selector:
     matchLabels:
       app: go
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: golang-app
-        image: { .Values.image }:{ .Values.release }
+        image: {{ .Values.image }}:{{ .Values.release }}
         ports:
         - containerPort: 3000

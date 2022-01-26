@@ -3,7 +3,10 @@ kind: Service
 metadata:
   name: golang-app
   namespace: {{ .Values.namespace }}
+  labels:
+    app: go
 spec:
+  type: ClusterIP
   selector:
     app: go
   ports:
